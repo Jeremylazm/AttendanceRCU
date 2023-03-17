@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 color: AppColors.mainBlueColor,
                 child: Center(
                   child: Text(
-                    'RCUcito Assistant',
+                    'RCU Assistance',
                     style: poppinsStyle.copyWith(
                       fontSize: 48.0,
                       color: AppColors.whiteColor,
@@ -74,7 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Padding(
                       padding: const EdgeInsets.only(left: 16.0),
                       child: Text(
-                        'User',
+                        'Runa',
                         style: poppinsStyle.copyWith(
                           fontSize: 12.0,
                           color: AppColors.whiteColor,
@@ -125,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Padding(
                       padding: const EdgeInsets.only(left: 16.0),
                       child: Text(
-                        'Contraseña',
+                        'Mot de passe',
                         style: poppinsStyle.copyWith(
                           fontSize: 12.0,
                           color: AppColors.whiteColor,
@@ -164,7 +164,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                           contentPadding: const EdgeInsets.only(top: 16.0),
-                          hintText: 'Ingrese su contraseña',
+                          hintText: 'Ingrese su password',
                           hintStyle: poppinsStyle.copyWith(
                             fontWeight: FontWeight.w400,
                             color: AppColors.blueDarkColor.withOpacity(0.5),
