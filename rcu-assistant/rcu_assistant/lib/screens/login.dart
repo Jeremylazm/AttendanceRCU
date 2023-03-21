@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:rcu_assistant/app_colors.dart';
-import 'package:rcu_assistant/app_icons.dart';
-import 'package:rcu_assistant/app_styles.dart';
+import 'package:rcu_assistant/configs/app_colors.dart';
+import 'package:rcu_assistant/configs/app_icons.dart';
+import 'package:rcu_assistant/configs/app_styles.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
