@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:rcu_assistant/responsive_widget.dart';
 import 'package:rcu_assistant/configs/app_colors.dart';
 import 'package:rcu_assistant/configs/app_icons.dart';
 import 'package:rcu_assistant/configs/app_styles.dart';
@@ -25,155 +26,213 @@ class _LoginScreenState extends State<LoginScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Expanded(
-              child: Container(
-                height: height,
-                color: AppColors.mainBlueColor,
-                child: Center(
-                  child: Text(
-                    'RCU Assistance',
-                    style: poppinsStyle.copyWith(
-                      fontSize: 48.0,
-                      color: AppColors.whiteColor,
-                      fontWeight: FontWeight.w800,
+            ResponsiveWidget.isSmallScreen(context)
+                ? const SizedBox()
+                : Expanded(
+                    child: Container(
+                      height: height,
+                      color: AppColors.mainBlueColor,
+                      child: Center(
+                        child: Text(
+                          'RCU Assistance',
+                          style: poppinsStyle.copyWith(
+                            fontSize: 48.0,
+                            color: AppColors.whiteColor,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-            ),
             Expanded(
               child: Container(
                 height: height,
-                margin: EdgeInsets.symmetric(horizontal: height * 0.12),
+                margin: EdgeInsets.symmetric(
+                    horizontal: ResponsiveWidget.isSmallScreen(context)
+                        ? height * 0.032
+                        : height * 0.12),
                 color: AppColors.backColor,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(height: height * 0.2),
-                    RichText(
-                      text: TextSpan(children: [
-                        TextSpan(
-                          text: 'Iniciar',
-                          style: poppinsStyle.copyWith(
-                            fontSize: 25.0,
-                            color: AppColors.whiteColor,
-                            fontWeight: FontWeight.normal,
-                          ),
-                        ),
-                        TextSpan(
-                            text: ' Sesión',
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.only(bottom: 40.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(height: height * 0.2),
+                      RichText(
+                        text: TextSpan(children: [
+                          TextSpan(
+                            text: 'Iniciar',
                             style: poppinsStyle.copyWith(
-                              fontWeight: FontWeight.w800,
-                              color: AppColors.whiteColor,
                               fontSize: 25.0,
-                            ))
-                      ]),
-                    ),
-                    SizedBox(height: height * 0.064),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 16.0),
-                      child: Text(
-                        'Runa',
-                        style: poppinsStyle.copyWith(
-                          fontSize: 12.0,
-                          color: AppColors.whiteColor,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 6.0),
-                    Container(
-                      height: 50.0,
-                      width: width,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16.0),
-                        color: AppColors.whiteColor,
-                      ),
-                      child: TextFormField(
-                        style: poppinsStyle.copyWith(
-                          fontWeight: FontWeight.w400,
-                          color: AppColors.blueDarkColor,
-                          fontSize: 12.0,
-                        ),
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          prefixIcon: IconButton(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 16.0),
-                            onPressed: null,
-                            icon: SvgPicture.asset(
-                              AppIcons.userIcon,
-                              colorFilter: const ColorFilter.mode(
-                                  AppColors.mainBlueColor, BlendMode.srcIn),
-                              height: 25.0,
-                              width: 25.0,
-                              fit: BoxFit.scaleDown,
+                              color: AppColors.whiteColor,
+                              fontWeight: FontWeight.normal,
                             ),
                           ),
-                          contentPadding: const EdgeInsets.only(top: 16.0),
-                          hintText: 'Ingrese su usuario',
-                          hintStyle: poppinsStyle.copyWith(
-                            fontWeight: FontWeight.w400,
-                            color: AppColors.blueDarkColor.withOpacity(0.5),
+                          TextSpan(
+                              text: ' Sesión',
+                              style: poppinsStyle.copyWith(
+                                fontWeight: FontWeight.w800,
+                                color: AppColors.whiteColor,
+                                fontSize: 25.0,
+                              ))
+                        ]),
+                      ),
+                      SizedBox(height: height * 0.064),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 16.0),
+                        child: Text(
+                          'Usuario',
+                          style: poppinsStyle.copyWith(
                             fontSize: 12.0,
+                            color: AppColors.whiteColor,
+                            fontWeight: FontWeight.w700,
                           ),
                         ),
                       ),
-                    ),
-                    SizedBox(height: height * 0.024),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 16.0),
-                      child: Text(
-                        'Mot de passe',
-                        style: poppinsStyle.copyWith(
-                          fontSize: 12.0,
+                      const SizedBox(height: 6.0),
+                      Container(
+                        height: 50.0,
+                        width: width,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16.0),
                           color: AppColors.whiteColor,
-                          fontWeight: FontWeight.w700,
                         ),
-                      ),
-                    ),
-                    const SizedBox(height: 6.0),
-                    Container(
-                      height: 50.0,
-                      width: width,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16.0),
-                        color: AppColors.whiteColor,
-                      ),
-                      child: TextFormField(
-                        style: poppinsStyle.copyWith(
-                          fontWeight: FontWeight.w400,
-                          color: AppColors.blueDarkColor,
-                          fontSize: 12.0,
-                        ),
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          prefixIcon: IconButton(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 16.0),
-                            onPressed: null,
-                            icon: SvgPicture.asset(
-                              AppIcons.passwordIcon,
-                              colorFilter: const ColorFilter.mode(
-                                  AppColors.mainBlueColor, BlendMode.srcIn),
-                              height: 25.0,
-                              width: 25.0,
-                              fit: BoxFit.scaleDown,
+                        child: TextFormField(
+                          style: poppinsStyle.copyWith(
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.blueDarkColor,
+                            fontSize: 12.0,
+                          ),
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            prefixIcon: IconButton(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 16.0),
+                              onPressed: null,
+                              icon: SvgPicture.asset(
+                                AppIcons.userIcon,
+                                colorFilter: const ColorFilter.mode(
+                                    AppColors.mainBlueColor, BlendMode.srcIn),
+                                height: 25.0,
+                                width: 25.0,
+                                fit: BoxFit.scaleDown,
+                              ),
+                            ),
+                            contentPadding: const EdgeInsets.only(top: 16.0),
+                            hintText: 'Ingrese su usuario',
+                            hintStyle: poppinsStyle.copyWith(
+                              fontWeight: FontWeight.w400,
+                              color: AppColors.blueDarkColor.withOpacity(0.5),
+                              fontSize: 12.0,
                             ),
                           ),
-                          contentPadding: const EdgeInsets.only(top: 16.0),
-                          hintText: 'Ingrese su password',
-                          hintStyle: poppinsStyle.copyWith(
-                            fontWeight: FontWeight.w400,
-                            color: AppColors.blueDarkColor.withOpacity(0.5),
+                        ),
+                      ),
+                      SizedBox(height: height * 0.024),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 16.0),
+                        child: Text(
+                          'Contraseña',
+                          style: poppinsStyle.copyWith(
                             fontSize: 12.0,
+                            color: AppColors.whiteColor,
+                            fontWeight: FontWeight.w700,
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      const SizedBox(height: 6.0),
+                      Container(
+                        height: 50.0,
+                        width: width,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16.0),
+                          color: AppColors.whiteColor,
+                        ),
+                        child: TextFormField(
+                          style: poppinsStyle.copyWith(
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.blueDarkColor,
+                            fontSize: 12.0,
+                          ),
+                          obscureText: true,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            prefixIcon: IconButton(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 16.0),
+                              onPressed: null,
+                              icon: SvgPicture.asset(
+                                AppIcons.passwordIcon,
+                                colorFilter: const ColorFilter.mode(
+                                    AppColors.mainBlueColor, BlendMode.srcIn),
+                                height: 25.0,
+                                width: 25.0,
+                                fit: BoxFit.scaleDown,
+                              ),
+                            ),
+                            suffixIcon: IconButton(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 16.0),
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.visibility_off,
+                                color: AppColors.greyColor,
+                              ),
+                            ),
+                            contentPadding: const EdgeInsets.only(top: 16.0),
+                            hintText: 'Ingrese su contraseña',
+                            hintStyle: poppinsStyle.copyWith(
+                              fontWeight: FontWeight.w400,
+                              color: AppColors.blueDarkColor.withOpacity(0.5),
+                              fontSize: 12.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: height * 0.03),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            '¿Olvidó su contraseña?',
+                            style: poppinsStyle.copyWith(
+                              fontSize: 12.0,
+                              color: AppColors.whiteColor,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: height * 0.05),
+                      Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                            onTap: () {},
+                            borderRadius: BorderRadius.circular(16.0),
+                            child: Ink(
+                              width: double.infinity,
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 70.0, vertical: 18.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16.0),
+                                color: AppColors.mainBlueColor,
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'Iniciar Sesión',
+                                  style: poppinsStyle.copyWith(
+                                    fontWeight: FontWeight.w700,
+                                    color: AppColors.whiteColor,
+                                    fontSize: 16.0,
+                                  ),
+                                ),
+                              ),
+                            )),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
