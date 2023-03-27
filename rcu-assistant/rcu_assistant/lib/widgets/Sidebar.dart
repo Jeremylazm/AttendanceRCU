@@ -4,8 +4,12 @@ import 'package:rcu_assistant/configs/app_colors.dart';
 import 'package:rcu_assistant/configs/app_styles.dart';
 
 class Sidebar extends StatelessWidget {
+
+  final List<Widget> items;
+
   const Sidebar({
     super.key,
+    required this.items,
   });
 
   @override
@@ -23,11 +27,13 @@ class Sidebar extends StatelessWidget {
       height: double.infinity,
       width: is_large_screen ? 250 : 100,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const SizedBox(height: 15,),
           Text(is_large_screen ? "RCU Assistance" : "RCU", style: poppinsStyle.copyWith(fontSize: is_large_screen ? 20 : 15, color: AppColors.whiteColor, fontWeight: FontWeight.w800),),
           SizedBox(height: is_large_screen ? 20 : 5,),
           Image.asset("assets/images/logo_rcu_fondo_transparente.png", height: is_large_screen ? 80 : 60,),
+          ...items,
           Expanded(child: Container(),),
           const ExitButton(),
         ],

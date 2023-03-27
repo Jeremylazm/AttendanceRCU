@@ -209,7 +209,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       Material(
                         color: Colors.transparent,
                         child: InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(context, "user");
+                            },
                             borderRadius: BorderRadius.circular(16.0),
                             child: Ink(
                               width: double.infinity,

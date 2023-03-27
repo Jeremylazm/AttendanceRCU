@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rcu_assistant/routes/app_routes.dart';
 import 'package:rcu_assistant/screens/login.dart';
 import 'package:rcu_assistant/screens/user/dashboard_screen.dart';
 import 'package:rcu_assistant/screens/user/dashboard.dart';
@@ -20,11 +21,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const LoginScreen(),
-      initialRoute: "login",
-      routes: {
-        "login" :  (BuildContext context) => const LoginScreen(),
-        "user" :  (BuildContext context) => const DashboardUserScreen(),
-      }
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.generateRoutes(),
     );
   }
 }
