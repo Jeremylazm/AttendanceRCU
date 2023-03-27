@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rcu_assistant/routes/app_routes.dart';
 import 'package:rcu_assistant/screens/login.dart';
-import 'package:rcu_assistant/screens/user/dashboard_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,4 +24,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
