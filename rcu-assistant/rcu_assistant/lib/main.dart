@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rcu_assistant/screens/login.dart';
 import 'package:rcu_assistant/screens/user/dashboard_screen.dart';
+import 'package:rcu_assistant/screens/user/dashboard.dart';
 
 void main() {
   runApp(const MyApp());

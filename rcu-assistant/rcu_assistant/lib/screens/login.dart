@@ -34,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       color: AppColors.mainBlueColor,
                       child: Center(
                         child: Text(
-                          'RCU Assistance',
+                          'RCU Attendance',
                           style: poppinsStyle.copyWith(
                             fontSize: 48.0,
                             color: AppColors.whiteColor,
