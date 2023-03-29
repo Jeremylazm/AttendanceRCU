@@ -19,32 +19,41 @@ const ItemButtonSidebar({ Key? key, required this.icon, required this.title, req
 
     final routeProvider = Provider.of<RoutesUserProvider>(context);
 
+    final width_screen = MediaQuery.of(context).size.width;
+    final is_large_screen = width_screen > 800;
+
     return InkWell(
       onTap: onTap,
       child: Container(
-        width: 200,
-        margin: EdgeInsets.symmetric(vertical: 5),
-        padding: EdgeInsets.all(8),
+        width: is_large_screen ? 200 : 50,
+        margin: const EdgeInsets.symmetric(vertical: 5),
+        padding: const EdgeInsets.all(8),
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
           color: routeProvider.indexRoute == index ? AppColors.whiteColor : AppColors.mainBlueColor,
         ),
         child: Row(
+          mainAxisAlignment: is_large_screen ? MainAxisAlignment.start : MainAxisAlignment.center,
           children: [
-            Icon(
-              icon,
-              color: routeProvider.indexRoute == index ? AppColors.mainBlueColor : AppColors.whiteColor
+            Tooltip(
+              message: "Hola a todos",
+              child: Icon(
+                icon,
+                color: routeProvider.indexRoute == index ? AppColors.mainBlueColor : AppColors.whiteColor
+              ),
             ),
-            const SizedBox(width: 10,),
-            Text(title, style: poppinsStyle.copyWith(
-              color: routeProvider.indexRoute == index 
-                ? AppColors.mainBlueColor 
-                : AppColors.whiteColor,
-              fontWeight: routeProvider.indexRoute == index
-                ? FontWeight.bold
-                : FontWeight.normal,
-              ),),
+            is_large_screen ? const SizedBox(width: 10,) : Container(),
+            is_large_screen 
+              ? Text(title, style: poppinsStyle.copyWith(
+                color: routeProvider.indexRoute == index 
+                  ? AppColors.mainBlueColor 
+                  : AppColors.whiteColor,
+                fontWeight: routeProvider.indexRoute == index
+                  ? FontWeight.bold
+                  : FontWeight.normal,
+                ),)
+              : Container(),
           ],
         ),
       ),
