@@ -49,7 +49,7 @@ class _UserSidebar extends StatelessWidget {
         ),
         ItemButtonSidebar(
           icon: Icons.assignment,
-          title: "Ordenes de trabajo",
+          title: "Órdenes de trabajo",
           index: 1,
           onTap: (){
             routeUserProvider.indexRoute = 1;

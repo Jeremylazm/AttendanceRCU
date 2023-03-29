@@ -11,7 +11,8 @@ const AttendancesTable({ Key? key }) : super(key: key);
       margin: EdgeInsets.all(25),
       child: Column(
         children: [
-          ItemTable(),
+          ItemTable(name: "Clara del valle",),
+          ItemTable(name: "Humbert Humbert",),
         ],
       ),
     );

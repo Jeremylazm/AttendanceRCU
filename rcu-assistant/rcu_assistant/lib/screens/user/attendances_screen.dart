@@ -10,6 +10,9 @@ const AttendancesScreen({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context){
+
+    final is_large_screen = MediaQuery.of(context).size.width > 800;
+
     return Expanded(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -18,7 +21,7 @@ const AttendancesScreen({ Key? key }) : super(key: key);
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CustomTitle(text: "Asistencias"),
-              CustomTitle(text: "29/03/2023", fontSize: 18),
+              is_large_screen ? CustomTitle(text: "29/03/2023", fontSize: 18) : Container(),
             ],
           ),
           AttendancesTable(),
