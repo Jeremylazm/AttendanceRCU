@@ -1,14 +1,12 @@
 
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rcu_assistant/providers/routes_user_provider.dart';
 import 'package:rcu_assistant/screens/screens.dart';
 import 'package:rcu_assistant/widgets/widgets.dart';
 
-
 class DashboardUserScreen extends StatelessWidget {
-  const DashboardUserScreen({ Key? key }) : super(key: key);
+  const DashboardUserScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context){
