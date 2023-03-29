@@ -48,7 +48,7 @@ class _UserSidebar extends StatelessWidget {
           },
         ),
         ItemButtonSidebar(
-          icon: Icons.fact_check,
+          icon: Icons.assignment,
           title: "Ordenes de trabajo",
           index: 1,
           onTap: (){
@@ -56,7 +56,7 @@ class _UserSidebar extends StatelessWidget {
           },
         ),
         ItemButtonSidebar(
-          icon: Icons.fact_check,
+          icon: Icons.analytics_outlined,
           title: "Reportes",
           index: 2,
           onTap: (){
