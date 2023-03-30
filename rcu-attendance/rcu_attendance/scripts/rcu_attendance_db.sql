@@ -145,21 +145,21 @@ VALUES('ESCUELA PROFESIONAL DE INGENIERIA ELECTRONICA', 'CERCA AL CEPRU');
 -- Insertar datos en la tabla orden
 USE rcu_attendance;
 INSERT INTO orden(id_orden, id_dependencia, descripcion, fechahora_inicio, fechahora_fin)
-VALUES('O0001', '1', 'CONFIGURACION DE UNA IMPRESORA CANON L455 SERIES', '2023-01-03 08:30:00', '2023-01-03 11:10:00');
+VALUES('T0001', '1', 'CONFIGURACION DE UNA IMPRESORA CANON L455 SERIES', '2023-01-03 08:30:00', '2023-01-03 11:10:00');
 INSERT INTO orden(id_orden, id_dependencia, descripcion, fechahora_inicio, fechahora_fin)
-VALUES('O0002', '2', 'INSTALACION DE OFFICE 2021 EN UNA PC', '2023-01-03 09:10:00', '2023-01-03 12:55:00');
+VALUES('T0002', '2', 'INSTALACION DE OFFICE 2021 EN UNA PC', '2023-01-03 09:10:00', '2023-01-03 12:55:00');
 INSERT INTO orden(id_orden, id_dependencia, descripcion, fechahora_inicio, fechahora_fin)
-VALUES('O0003', '5', 'MANTENIMIENTO DE UNA IMPRESORA KONICA MINOLTA BIZHUB 363', '2023-01-04 09:00:00', '2023-01-04 12:00:00');
+VALUES('T0003', '5', 'MANTENIMIENTO DE UNA IMPRESORA KONICA MINOLTA BIZHUB 363', '2023-01-04 09:00:00', '2023-01-04 12:00:00');
 INSERT INTO orden(id_orden, id_dependencia, descripcion, fechahora_inicio, fechahora_fin)
-VALUES('O0004', '3', 'CONFIGURACION DE UN ESCANER KYOCERA', '2023-01-04 09:20:00', '2023-01-04 10:10:00');
+VALUES('T0004', '3', 'CONFIGURACION DE UN ESCANER KYOCERA', '2023-01-04 09:20:00', '2023-01-04 10:10:00');
 INSERT INTO orden(id_orden, id_dependencia, descripcion, fechahora_inicio, fechahora_fin)
-VALUES('O0005', '2', 'INSTALACION DE WINDOWS 10 EN DOS PCS', '2023-01-04 10:40:00', '2023-01-04 13:00:00');
+VALUES('T0005', '2', 'INSTALACION DE WINDOWS 10 EN DOS PCS', '2023-01-04 10:40:00', '2023-01-04 13:00:00');
 INSERT INTO orden(id_orden, id_dependencia, descripcion, fechahora_inicio, fechahora_fin)
-VALUES('O0006', '7', 'INSTALACION DE CABLEO DE RED', '2023-01-05 08:15:00', '2023-01-05 13:00:00');
+VALUES('T0006', '7', 'INSTALACION DE CABLEO DE RED', '2023-01-05 08:15:00', '2023-01-05 13:00:00');
 INSERT INTO orden(id_orden, id_dependencia, descripcion, fechahora_inicio, fechahora_fin)
-VALUES('O0007', '4', 'CONFIGURACION DE IP DINAMICA A FIJA DE UNA PC', '2023-01-05 09:00:00', '2023-01-05 12:00:00');
+VALUES('T0007', '4', 'CONFIGURACION DE IP DINAMICA A FIJA DE UNA PC', '2023-01-05 09:00:00', '2023-01-05 12:00:00');
 INSERT INTO orden(id_orden, id_dependencia, descripcion, fechahora_inicio, fechahora_fin)
-VALUES('O0008', '1', 'CONFIGURACION DE UN ACCESS POINT', '2023-01-05 08:50:00', '2023-01-05 12:30:00');
+VALUES('T0008', '1', 'CONFIGURACION DE UN ACCESS POINT', '2023-01-05 08:50:00', '2023-01-05 12:30:00');
 
 -- Insertar datos en la tabla usuario orden
 USE rcu_attendance;

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:rcu_assistant/configs/app_colors.dart';
-import 'package:rcu_assistant/configs/app_styles.dart';
-import 'package:rcu_assistant/widgets/custom_title.dart';
 import 'package:rcu_assistant/widgets/widgets.dart';
 
 class AttendancesScreen extends StatelessWidget {
@@ -11,7 +8,7 @@ class AttendancesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final is_large_screen = MediaQuery.of(context).size.width > 800;
+    final isLargeScreen = MediaQuery.of(context).size.width > 800;
     initializeDateFormatting();
     DateTime now = DateTime.now();
     var dateString = DateFormat('dd/MM/yyyy').format(now);
@@ -23,12 +20,12 @@ class AttendancesScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const CustomTitle(text: "Asistencias"),
-              is_large_screen
+              isLargeScreen
                   ? CustomTitle(text: dateString, fontSize: 18)
                   : Container(),
             ],
           ),
-          AttendancesTable(),
+          const AttendancesTable(),
         ],
       ),
     );

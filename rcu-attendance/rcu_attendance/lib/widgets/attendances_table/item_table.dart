@@ -51,12 +51,12 @@ const _Icon({ Key? key, this.letter }) : super(key: key);
     return Container(
       width: 40,
       height: 40,
-      margin: EdgeInsets.symmetric(vertical: 8),
+      margin: const EdgeInsets.symmetric(vertical: 8),
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: Colors.grey.withOpacity(0.4),
         border: Border.all(width: 2.0, color: AppColors.mainBlueColor),
-        borderRadius: BorderRadius.all(Radius.circular(5)),
+        borderRadius: const BorderRadius.all(Radius.circular(5)),
       ),
       child: Text(letter ?? "J", style: poppinsStyle.copyWith(fontSize: 20, fontWeight: FontWeight.bold),),
     );
