@@ -76,17 +76,19 @@ VALUES('87654325', 'INGENIERO DE RCU NUMERO 5', 'ingenierorcu5', '987654321', 1)
 INSERT INTO usuario(id_usuario, nombre, contraseña, celular, es_admin)
 VALUES('87654326', 'INGENIERO DE RCU NUMERO 6', 'ingenierorcu6', '987654321', 1);
 INSERT INTO usuario(id_usuario, nombre, contraseña, celular, es_admin)
-VALUES('12345671', 'PRACTICANTE DE RCU NUMERO 1', 'practicantercu1', '987654321', 0);
+VALUES('12345671', 'JOSE ANGEL YAÑEZ TUERO', 'practicantercu1', '987654321', 0);
 INSERT INTO usuario(id_usuario, nombre, contraseña, celular, es_admin)
-VALUES('12345672', 'PRACTICANTE DE RCU NUMERO 2', 'practicantercu3', '987654321', 0);
+VALUES('12345672', 'JEREMY AXL LAZO MENDOZA', 'practicantercu2', '987654321', 0);
 INSERT INTO usuario(id_usuario, nombre, contraseña, celular, es_admin)
-VALUES('12345673', 'PRACTICANTE DE RCU NUMERO 3', 'practicantercu3', '987654321', 0);
+VALUES('12345673', 'KENNY HAROLD CARMONA CHOQUEMAMANI', 'practicantercu3', '987654321', 0);
 INSERT INTO usuario(id_usuario, nombre, contraseña, celular, es_admin)
-VALUES('12345674', 'PRACTICANTE DE RCU NUMERO 4', 'practicantercu4', '987654321', 0);
+VALUES('12345674', 'KEVIN HERNAN FUENTES CCORI', 'practicantercu4', '987654321', 0);
 INSERT INTO usuario(id_usuario, nombre, contraseña, celular, es_admin)
-VALUES('12345675', 'PRACTICANTE DE RCU NUMERO 5', 'practicantercu5', '987654321', 0);
+VALUES('12345675', 'CRISTIAN LUIS GUEVARA FERRO', 'practicantercu5', '987654321', 0);
 INSERT INTO usuario(id_usuario, nombre, contraseña, celular, es_admin)
-VALUES('12345676', 'PRACTICANTE DE RCU NUMERO 6', 'practicantercu6', '987654321', 0);
+VALUES('12345676', 'VANESSA MENDOZA INOÑAN', 'practicantercu6', '987654321', 0);
+INSERT INTO usuario(id_usuario, nombre, contraseña, celular, es_admin)
+VALUES('12345677', 'FRANCO JAIR VIGIL BRAVO', 'practicantercu7', '987654321', 0);
 
 -- Insertar datos en la tabla asistencia
 USE rcu_attendance;
@@ -164,35 +166,35 @@ VALUES('T0008', '1', 'CONFIGURACION DE UN ACCESS POINT', '2023-01-05 08:50:00', 
 -- Insertar datos en la tabla usuario orden
 USE rcu_attendance;
 INSERT INTO usuario_orden(id_usuario, id_orden)
-VALUES('12345671', 'O0001');
+VALUES('12345671', 'T0001');
 INSERT INTO usuario_orden(id_usuario, id_orden) 
-VALUES('12345673', 'O0001');
+VALUES('12345673', 'T0001');
 INSERT INTO usuario_orden(id_usuario, id_orden)
-VALUES('12345675', 'O0001');
+VALUES('12345675', 'T0001');
 INSERT INTO usuario_orden(id_usuario, id_orden)
-VALUES('12345672', 'O0002');
+VALUES('12345672', 'T0002');
 INSERT INTO usuario_orden(id_usuario, id_orden)
-VALUES('12345674', 'O0002');
+VALUES('12345674', 'T0002');
 INSERT INTO usuario_orden(id_usuario, id_orden)
-VALUES('12345676', 'O0003');
+VALUES('12345676', 'T0003');
 INSERT INTO usuario_orden(id_usuario, id_orden)
-VALUES('12345672', 'O0004');
+VALUES('12345672', 'T0004');
 INSERT INTO usuario_orden(id_usuario, id_orden)
-VALUES('12345674', 'O0004');
+VALUES('12345674', 'T0004');
 INSERT INTO usuario_orden(id_usuario, id_orden)
-VALUES('12345672', 'O0005');
+VALUES('12345672', 'T0005');
 INSERT INTO usuario_orden(id_usuario, id_orden)
-VALUES('12345674', 'O0005');
+VALUES('12345674', 'T0005');
 INSERT INTO usuario_orden(id_usuario, id_orden)
-VALUES('12345675', 'O0006');
+VALUES('12345675', 'T0006');
 INSERT INTO usuario_orden(id_usuario, id_orden)
-VALUES('12345671', 'O0006');
+VALUES('12345671', 'T0006');
 INSERT INTO usuario_orden(id_usuario, id_orden)
-VALUES('12345676', 'O0007');
+VALUES('12345676', 'T0007');
 INSERT INTO usuario_orden(id_usuario, id_orden)
-VALUES('12345672', 'O0008');
+VALUES('12345672', 'T0008');
 INSERT INTO usuario_orden(id_usuario, id_orden)
-VALUES('12345674', 'O0008'); 
+VALUES('12345674', 'T0008'); 
 
 USE rcu_attendance;
 SELECT * FROM usuario;
