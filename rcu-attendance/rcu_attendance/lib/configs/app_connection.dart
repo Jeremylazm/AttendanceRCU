@@ -1,24 +1,23 @@
 
-import 'package:mysql1/mysql1.dart';
+import 'package:mysql_client/mysql_client.dart';
 
 class AppConnection {
-  
-  static late MySqlConnection conn;
+
+  static late MySQLConnectionPool conn;
 
   static getConnetion() async {
-    try{
-
-      var settings = ConnectionSettings(
-        host: 'localhost', 
+    try {
+      conn = MySQLConnectionPool(
+        host: '127.0.0.1',
         port: 3306,
-        user: 'rcu',
-        password: 'unsaac202',
-        db: 'rcu_attendance'
+        userName: 'rcu',
+        password: 'unsaac2023',
+        maxConnections: 10,
+        databaseName: 'rcu_attendance', // optional,
       );
-      conn = await MySqlConnection.connect(settings);
-
-    } catch(e){
+    } catch(e) {
       print("Error: ${e.toString()}");
     }
+    
   }
 }
