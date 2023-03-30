@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:rcu_assistant/widgets/attendances_table/item_table.dart';
+import 'package:rcu_assistant/widgets/user_table/item_table.dart';
 
-class AttendancesTable extends StatelessWidget {
-const AttendancesTable({ Key? key }) : super(key: key);
+class UsersTable extends StatelessWidget {
+const UsersTable({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context){

@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:rcu_assistant/configs/app_colors.dart';
 import 'package:rcu_assistant/configs/app_styles.dart';
-import 'package:rcu_assistant/widgets/attendances_table/assistance_button.dart';
+import 'package:rcu_assistant/widgets/user_table/assistance_button.dart';
 
 class ItemTable extends StatelessWidget {
 

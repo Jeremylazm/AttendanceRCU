@@ -24,7 +24,7 @@ const AttendancesScreen({ Key? key }) : super(key: key);
               is_large_screen ? CustomTitle(text: "29/03/2023", fontSize: 18) : Container(),
             ],
           ),
-          AttendancesTable(),
+          UsersTable(),
         ],
       ),
     );
