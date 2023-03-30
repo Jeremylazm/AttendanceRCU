@@ -1,8 +1,6 @@
-
 import 'package:mysql_client/mysql_client.dart';
 
 class AppConnection {
-
   static late MySQLConnectionPool conn;
 
   static getConnetion() async {
@@ -15,9 +13,8 @@ class AppConnection {
         maxConnections: 10,
         databaseName: 'rcu_attendance', // optional,
       );
-    } catch(e) {
+    } catch (e) {
       print("Error: ${e.toString()}");
     }
-    
   }
 }

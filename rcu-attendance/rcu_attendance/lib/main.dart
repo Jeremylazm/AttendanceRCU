@@ -7,7 +7,7 @@ import 'package:rcu_assistant/services/users_service.dart';
 void main() async {
   await AppConnection.getConnetion();
   var usuarios = await UserService.getUsers();
-  for(var row in usuarios.rows){
+  for (var row in usuarios.rows) {
     print("0: ${row.colAt(1)},");
   }
   runApp(const MyApp());
