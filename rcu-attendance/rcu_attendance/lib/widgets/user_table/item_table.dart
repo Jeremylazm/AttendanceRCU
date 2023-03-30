@@ -7,8 +7,9 @@ import 'package:rcu_assistant/widgets/user_table/assistance_button.dart';
 class ItemTable extends StatelessWidget {
 
 final String name;
+final Widget button;
 
-const ItemTable({ Key? key, required this.name }) : super(key: key);
+const ItemTable({ Key? key, required this.name, required this.button }) : super(key: key);
 
 
   @override
@@ -24,7 +25,7 @@ const ItemTable({ Key? key, required this.name }) : super(key: key);
           children: [
             _Icon(),
             _Name(name: name),
-            AssistanceButton(),
+            button,
           ],
         ),
         SizedBox(
