@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rcu_assistant/widgets/user_table/assistance_button.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:rcu_assistant/widgets/widgets.dart';
@@ -25,7 +26,14 @@ class AttendancesScreen extends StatelessWidget {
                   : Container(),
             ],
           ),
-          const AttendancesTable(),
+          const UsersTable(
+            items: [
+              ItemTable(name: "Clara del valle", button: AssistanceButton()),
+              ItemTable(name: "Clara del valle", button: AssistanceButton()),
+              ItemTable(name: "Clara del valle", button: AssistanceButton()),
+              ItemTable(name: "Clara del valle", button: AssistanceButton()),
+            ],
+          ),
         ],
       ),
     );
