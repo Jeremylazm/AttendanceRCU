@@ -126,7 +126,7 @@ class WorkOrderScreen extends StatelessWidget {
                               horizontal: 20.0, vertical: 0.0),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
-                            color: AppColors.mainBlueColor,
+                            color: AppColors.warningColor,
                           ),
                           child: Center(
                             child: Text(
@@ -152,7 +152,7 @@ class WorkOrderScreen extends StatelessWidget {
                               horizontal: 20.0, vertical: 0.0),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
-                            color: AppColors.mainBlueColor,
+                            color: AppColors.dangerColor,
                           ),
                           child: Center(
                             child: Text(
@@ -194,7 +194,7 @@ class WorkOrderScreen extends StatelessWidget {
                               horizontal: 20.0, vertical: 0.0),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
-                            color: AppColors.mainBlueColor,
+                            color: AppColors.warningColor,
                           ),
                           child: Center(
                             child: Text(
@@ -220,7 +220,7 @@ class WorkOrderScreen extends StatelessWidget {
                               horizontal: 20.0, vertical: 0.0),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
-                            color: AppColors.mainBlueColor,
+                            color: AppColors.dangerColor,
                           ),
                           child: Center(
                             child: Text(
@@ -262,7 +262,7 @@ class WorkOrderScreen extends StatelessWidget {
                               horizontal: 20.0, vertical: 0.0),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
-                            color: AppColors.mainBlueColor,
+                            color: AppColors.warningColor,
                           ),
                           child: Center(
                             child: Text(
@@ -288,7 +288,7 @@ class WorkOrderScreen extends StatelessWidget {
                               horizontal: 20.0, vertical: 0.0),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
-                            color: AppColors.mainBlueColor,
+                            color: AppColors.dangerColor,
                           ),
                           child: Center(
                             child: Text(
@@ -330,7 +330,7 @@ class WorkOrderScreen extends StatelessWidget {
                               horizontal: 20.0, vertical: 0.0),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
-                            color: AppColors.mainBlueColor,
+                            color: AppColors.warningColor,
                           ),
                           child: Center(
                             child: Text(
@@ -356,7 +356,7 @@ class WorkOrderScreen extends StatelessWidget {
                               horizontal: 20.0, vertical: 0.0),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
-                            color: AppColors.mainBlueColor,
+                            color: AppColors.dangerColor,
                           ),
                           child: Center(
                             child: Text(
