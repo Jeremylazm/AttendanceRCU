@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:rcu_assistant/providers/providers.dart';
 import 'package:rcu_assistant/widgets/user_table/assistance_button.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -9,10 +11,14 @@ class AttendancesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final user_provider = Provider.of<UsersProvider>(context);
+
     final isLargeScreen = MediaQuery.of(context).size.width > 800;
     initializeDateFormatting();
     DateTime now = DateTime.now();
     var dateString = DateFormat('dd/MM/yyyy').format(now);
+
     return Expanded(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,13 +32,22 @@ class AttendancesScreen extends StatelessWidget {
                   : Container(),
             ],
           ),
-          const UsersTable(
-            items: [
-              ItemTable(name: "Clara del valle", button: AssistanceButton()),
-              ItemTable(name: "Clara del valle", button: AssistanceButton()),
-              ItemTable(name: "Clara del valle", button: AssistanceButton()),
-              ItemTable(name: "Clara del valle", button: AssistanceButton()),
-            ],
+          FutureBuilder(
+            future: user_provider.getUsers(),
+            builder: (context, snapshot) {
+              if(snapshot.hasData){
+                return UsersTable(
+                  items: [
+                    ...snapshot.data!.map((user) => ItemTable(
+                      name: user.nombre, 
+                      button: AssistanceButton(),
+                    )).toList()
+                  ],
+                );
+              } else {
+                return Container();
+              }
+            },
           ),
         ],
       ),
