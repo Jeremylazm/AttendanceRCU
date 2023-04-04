@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:rcu_assistant/providers/routes_user_provider.dart';
 import 'package:rcu_assistant/providers/users_provider.dart';
 import 'package:rcu_assistant/screens/screens.dart';
+import 'package:rcu_assistant/screens/user/charts_screen.dart';
 import 'package:rcu_assistant/widgets/widgets.dart';
 
 class DashboardUserScreen extends StatelessWidget {
@@ -91,7 +92,7 @@ _Content({ Key? key }) : super(key: key);
 
     final routesProvider = Provider.of<RoutesUserProvider>(context);
 
-    List<Widget> screens = [AttendancesScreen(), WorkOrderScreen(), ReportsScreen()];
+    List<Widget> screens = [AttendancesScreen(), WorkOrderScreen(), ReportsScreen(), ChartsScreen()];
 
     return Container(
       child: screens[routesProvider.indexRoute],
