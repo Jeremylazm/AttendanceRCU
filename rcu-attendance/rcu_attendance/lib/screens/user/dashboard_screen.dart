@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rcu_assistant/providers/routes_user_provider.dart';
+import 'package:rcu_assistant/providers/users_provider.dart';
 import 'package:rcu_assistant/screens/screens.dart';
 import 'package:rcu_assistant/screens/user/charts_screen.dart';
 import 'package:rcu_assistant/widgets/widgets.dart';
@@ -11,8 +12,11 @@ class DashboardUserScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
-    return ChangeNotifierProvider(
-      create: (_) => RoutesUserProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_)=>RoutesUserProvider(),),
+        ChangeNotifierProvider(create: (_)=>UsersProvider(),)
+      ],
       child: Scaffold(
         body: Row(
           children: [
@@ -22,6 +26,17 @@ class DashboardUserScreen extends StatelessWidget {
         ),
       ),
     );
+    /*return ChangeNotifierProvider(
+      create: (_) => RoutesUserProvider(),
+      child: Scaffold(
+        body: Row(
+          children: [
+            _UserSidebar(),
+            _Content(),
+          ],
+        ),
+      ),
+    );*/
   }
 }
 
