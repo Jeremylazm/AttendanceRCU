@@ -24,11 +24,16 @@ const OrderTable({ Key? key }) : super(key: key);
         if(!snapshot.hasData){
           return Text("Cargando");
         } else {
-          return DataTable(
-            columns: [...generateColumns()],
-            rows: [
-              ...generateRows(snapshot.data!)
-            ],
+          return Container(
+            height: 500,
+            child: SingleChildScrollView(
+              child: DataTable(
+                columns: [...generateColumns()],
+                rows: [
+                  ...generateRows(snapshot.data!)
+                ],
+              ),
+            ),
           );
         }
       },
