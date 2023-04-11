@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:rcu_assistant/configs/app_colors.dart';
 import 'package:rcu_assistant/configs/app_styles.dart';
+import 'package:rcu_assistant/helpers.dart';
 import 'package:rcu_assistant/widgets/user_table/assistance_button.dart';
 
 class ItemTable extends StatelessWidget {
@@ -23,7 +24,7 @@ const ItemTable({ Key? key, required this.name, required this.button }) : super(
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            _Icon(),
+            _Icon(letter: name[0].toUpperCase(), color: generateColorFromName(name),),
             _Name(name: name),
             button,
           ],
@@ -44,8 +45,9 @@ const ItemTable({ Key? key, required this.name, required this.button }) : super(
 class _Icon extends StatelessWidget {
 
 final String? letter;
+final Color? color;
 
-const _Icon({ Key? key, this.letter }) : super(key: key);
+const _Icon({ Key? key, this.letter, this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context){
@@ -55,7 +57,7 @@ const _Icon({ Key? key, this.letter }) : super(key: key);
       margin: const EdgeInsets.symmetric(vertical: 8),
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: Colors.grey.withOpacity(0.4),
+        color: color != null ? color : Colors.grey.withOpacity(0.4),
         border: Border.all(width: 2.0, color: AppColors.mainBlueColor),
         borderRadius: const BorderRadius.all(Radius.circular(5)),
       ),
