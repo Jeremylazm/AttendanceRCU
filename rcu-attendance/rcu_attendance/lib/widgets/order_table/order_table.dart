@@ -61,7 +61,7 @@ const OrderTable({ Key? key }) : super(key: key);
       DataRow orderRow = DataRow(
         cells: [
           DataCell(Text(order.idOrden,style: poppinsStyle.copyWith(fontWeight: FontWeight.w500))),
-          DataCell(Text(order.dependencia,style: poppinsStyle.copyWith(fontWeight: FontWeight.w500))),
+          DataCell(Text(order.dependencia,style: poppinsStyle.copyWith(fontWeight: FontWeight.w500), overflow: TextOverflow.ellipsis, maxLines: 2,)),
           DataCell(Text(order.fechaInicio.toString(),style: poppinsStyle.copyWith(fontWeight: FontWeight.w500))),
           DataCell(Text(order.fechaFin.toString(),style: poppinsStyle.copyWith(fontWeight: FontWeight.w500))),
           DataCell(
