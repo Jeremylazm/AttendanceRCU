@@ -4,7 +4,7 @@ import 'package:mysql_client/mysql_client.dart';
 import 'package:rcu_assistant/models/work_order.dart';
 import 'package:rcu_assistant/services/services.dart';
 
-class WorkOrderProvider {
+class WorkOrderProvider extends ChangeNotifier {
 
   Future<List<WorkOrder>> getTodayOrders() async {
     final List<WorkOrder> orders = [];

@@ -5,7 +5,7 @@ import 'package:rcu_assistant/configs/app_connection.dart';
 class WorkOrderService {
 
   static Future<IResultSet> getWorkOrders() async {
-    final orders = AppConnection.conn.execute("from orden inner join dependencia on orden.id_dependencia = dependencia.id_dependencia order by orden.fechahora_fin");
+    final orders = AppConnection.conn.execute("select o.id_orden, d.nombre, o.fechahora_inicio, o.fechahora_fin  from orden o inner join dependencia d on o.id_dependencia = d.id_dependencia order by o.fechahora_fin");
     return orders;
   }
 
