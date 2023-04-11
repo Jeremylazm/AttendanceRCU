@@ -15,7 +15,7 @@ class DashboardUserScreen extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_)=>RoutesUserProvider(),),
-        ChangeNotifierProvider(create: (_)=>UsersProvider(),)
+        ChangeNotifierProvider(create: (_)=>UsersProvider(),),
       ],
       child: Scaffold(
         body: Row(
