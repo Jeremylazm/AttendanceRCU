@@ -30,6 +30,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  url_launcher: ^6.1.0
+  path_provider: ^2.0.1
+  path_provider_foundation: ^2.1.0
+  desktop_window: 0.4.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -41,10 +47,26 @@ dependencies:
   intl: ^0.18.0
   mysql_client: ^0.0.27
   fl_chart: ^0.61.0
+  syncfusion_flutter_charts: ^21.1.38
+
+  syncfusion_localizations: ^21.1.35
+  syncfusion_flutter_datagrid_export: ^21.1.35-beta
+  syncfusion_flutter_calendar: ^21.1.35
+  syncfusion_flutter_datepicker: ^21.1.35
+  syncfusion_flutter_gauges: ^21.1.35
+  syncfusion_flutter_sliders: ^21.1.35
+  syncfusion_flutter_pdf: ^21.1.35
+  syncfusion_flutter_barcodes: ^21.1.35
+  syncfusion_officechart: ^21.1.35-beta
+  syncfusion_flutter_maps: ^21.1.35
+  syncfusion_flutter_signaturepad: ^21.1.35
+  syncfusion_flutter_pdfviewer: ^21.1.35
+  syncfusion_flutter_treemap: ^21.1.35
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
