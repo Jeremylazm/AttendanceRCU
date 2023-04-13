@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rcu_assistant/providers/providers.dart';
-import 'package:rcu_assistant/widgets/user_table/assistance_button.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:rcu_assistant/widgets/widgets.dart';
@@ -12,7 +11,7 @@ class AttendancesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final user_provider = Provider.of<UsersProvider>(context);
+    final userProvider = Provider.of<UsersProvider>(context);
 
     final isLargeScreen = MediaQuery.of(context).size.width > 800;
     initializeDateFormatting();
@@ -33,14 +32,14 @@ class AttendancesScreen extends StatelessWidget {
             ],
           ),
           FutureBuilder(
-            future: user_provider.getUsers(),
+            future: userProvider.getUsers(),
             builder: (context, snapshot) {
               if(snapshot.hasData){
                 return UsersTable(
                   items: [
                     ...snapshot.data!.map((user) => ItemTable(
                       name: user.nombre, 
-                      button: AssistanceButton(),
+                      button: const AssistanceButton(),
                     )).toList()
                   ],
                 );

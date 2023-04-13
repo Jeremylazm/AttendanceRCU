@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:rcu_assistant/configs/app_connection.dart';
 import 'package:rcu_assistant/routes/app_routes.dart';
 import 'package:rcu_assistant/screens/login.dart';
-import 'package:rcu_assistant/services/users_service.dart';
 
 void main() async {
   await AppConnection.getConnetion();

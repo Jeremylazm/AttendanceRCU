@@ -17,7 +17,7 @@ class DashboardUserScreen extends StatelessWidget {
         ChangeNotifierProvider(create: (_)=>RoutesUserProvider(),),
         ChangeNotifierProvider(create: (_)=>UsersProvider(),),
       ],
-      child: Scaffold(
+      child: const Scaffold(
         body: Row(
           children: [
             _UserSidebar(),
@@ -41,9 +41,7 @@ class DashboardUserScreen extends StatelessWidget {
 }
 
 class _UserSidebar extends StatelessWidget {
-  const _UserSidebar({
-    super.key,
-  });
+  const _UserSidebar();
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +50,7 @@ class _UserSidebar extends StatelessWidget {
 
     return Sidebar(
       items: [
-        SizedBox(height: 30,),
+        const SizedBox(height: 30,),
         ItemButtonSidebar(
           icon: Icons.fact_check,
           title: "Asistencias",
@@ -84,7 +82,7 @@ class _UserSidebar extends StatelessWidget {
 
 class _Content extends StatelessWidget {
 
-_Content({ Key? key }) : super(key: key);
+const _Content({ Key? key }) : super(key: key);
 
 
   @override
@@ -92,7 +90,7 @@ _Content({ Key? key }) : super(key: key);
 
     final routesProvider = Provider.of<RoutesUserProvider>(context);
 
-    List<Widget> screens = [AttendancesScreen(), WorkOrderScreen(), ReportsScreen(), ChartsScreen()];
+    List<Widget> screens = [const AttendancesScreen(), const WorkOrderScreen(), const ReportsScreen(), ChartsScreen()];
 
     return Container(
       child: screens[routesProvider.indexRoute],

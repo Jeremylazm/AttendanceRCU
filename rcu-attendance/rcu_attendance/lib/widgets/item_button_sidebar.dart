@@ -19,13 +19,13 @@ const ItemButtonSidebar({ Key? key, required this.icon, required this.title, req
 
     final routeProvider = Provider.of<RoutesUserProvider>(context);
 
-    final width_screen = MediaQuery.of(context).size.width;
-    final is_large_screen = width_screen > 800;
+    final widthScreen = MediaQuery.of(context).size.width;
+    final isLargeScreen = widthScreen > 800;
 
     return InkWell(
       onTap: onTap,
       child: Container(
-        width: is_large_screen ? 200 : 50,
+        width: isLargeScreen ? 200 : 50,
         margin: const EdgeInsets.symmetric(vertical: 5),
         padding: const EdgeInsets.all(8),
         alignment: Alignment.center,
@@ -34,7 +34,7 @@ const ItemButtonSidebar({ Key? key, required this.icon, required this.title, req
           color: routeProvider.indexRoute == index ? AppColors.whiteColor : AppColors.mainBlueColor,
         ),
         child: Row(
-          mainAxisAlignment: is_large_screen ? MainAxisAlignment.start : MainAxisAlignment.center,
+          mainAxisAlignment: isLargeScreen ? MainAxisAlignment.start : MainAxisAlignment.center,
           children: [
             Tooltip(
               message: "Hola a todos",
@@ -43,8 +43,8 @@ const ItemButtonSidebar({ Key? key, required this.icon, required this.title, req
                 color: routeProvider.indexRoute == index ? AppColors.mainBlueColor : AppColors.whiteColor
               ),
             ),
-            is_large_screen ? const SizedBox(width: 10,) : Container(),
-            is_large_screen 
+            isLargeScreen ? const SizedBox(width: 10,) : Container(),
+            isLargeScreen 
               ? Text(title, style: poppinsStyle.copyWith(
                 color: routeProvider.indexRoute == index 
                   ? AppColors.mainBlueColor 

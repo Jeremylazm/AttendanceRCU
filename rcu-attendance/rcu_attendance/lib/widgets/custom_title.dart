@@ -14,7 +14,7 @@ const CustomTitle({ Key? key, required this.text, this.fontSize }) : super(key: 
   @override
   Widget build(BuildContext context){
     return Container(
-      margin: EdgeInsets.all(25),
+      margin: const EdgeInsets.all(25),
       child: Text(text, style: poppinsStyle.copyWith(
         fontSize: fontSize ?? 25, 
         fontWeight: FontWeight.bold,

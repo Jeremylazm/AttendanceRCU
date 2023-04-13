@@ -19,12 +19,12 @@ const OrderTable({ Key? key }) : super(key: key);
       builder: (context, snapshot){
         if(snapshot.hasError){
           print(snapshot.error.toString());
-          return Text("Se produjo un error");
+          return const Text("Se produjo un error");
         }
         if(!snapshot.hasData){
-          return Text("Cargando");
+          return const Text("Cargando");
         } else {
-          return Container(
+          return SizedBox(
             height: 500,
             child: SingleChildScrollView(
               child: DataTable(

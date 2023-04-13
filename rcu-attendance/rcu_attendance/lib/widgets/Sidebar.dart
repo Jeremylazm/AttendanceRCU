@@ -15,8 +15,8 @@ class Sidebar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    final width_screen = MediaQuery.of(context).size.width;
-    final is_large_screen = width_screen > 800;
+    final widthScreen = MediaQuery.of(context).size.width;
+    final isLargeScreen = widthScreen > 800;
 
     return Container(
       decoration: const BoxDecoration(
@@ -25,14 +25,14 @@ class Sidebar extends StatelessWidget {
       ),
       margin: const EdgeInsets.all(10),
       height: double.infinity,
-      width: is_large_screen ? 250 : 100,
+      width: isLargeScreen ? 250 : 100,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const SizedBox(height: 15,),
-          Text(is_large_screen ? "RCU Assistance" : "RCU", style: poppinsStyle.copyWith(fontSize: is_large_screen ? 20 : 15, color: AppColors.whiteColor, fontWeight: FontWeight.w800),),
-          SizedBox(height: is_large_screen ? 20 : 5,),
-          Image.asset("assets/images/logo_rcu_fondo_transparente.png", height: is_large_screen ? 80 : 60,),
+          Text(isLargeScreen ? "RCU Assistance" : "RCU", style: poppinsStyle.copyWith(fontSize: isLargeScreen ? 20 : 15, color: AppColors.whiteColor, fontWeight: FontWeight.w800),),
+          SizedBox(height: isLargeScreen ? 20 : 5,),
+          Image.asset("assets/images/logo_rcu_fondo_transparente.png", height: isLargeScreen ? 80 : 60,),
           ...items,
           Expanded(child: Container(),),
           const ExitButton(),
@@ -52,8 +52,8 @@ class ExitButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final width_screen = MediaQuery.of(context).size.width;
-    final is_large_screen = width_screen > 800;
+    final widthScreen = MediaQuery.of(context).size.width;
+    final isLargeScreen = widthScreen > 800;
 
     return Align(
       alignment: Alignment.bottomRight,
@@ -69,7 +69,7 @@ class ExitButton extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Icon(Icons.exit_to_app, size: 20,),
-                is_large_screen ? Text("Salir", style: poppinsStyle.copyWith(fontWeight: FontWeight.bold),) : Container(),
+                isLargeScreen ? Text("Salir", style: poppinsStyle.copyWith(fontWeight: FontWeight.bold),) : Container(),
               ],
             ),
           ),

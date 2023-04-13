@@ -23,7 +23,7 @@ class WorkOrderScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: ChangeNotifierProvider(
               create: (_) => WorkOrderProvider(),
-              child: OrderTable()
+              child: const OrderTable()
             ),
           )
         ],

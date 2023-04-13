@@ -23,7 +23,7 @@ const AssistanceDialog({ Key? key , required this.name}) : super(key: key);
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           TextField(
             obscureText: true,
             decoration: bordersDecoration,

@@ -10,32 +10,32 @@ InputDecoration bordersDecoration = InputDecoration(
     fillColor: Colors.white,
     filled: true,
     isDense: true,
-    contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-    errorBorder: OutlineInputBorder(
+    contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+    errorBorder: const OutlineInputBorder(
       borderSide: BorderSide(
         color: AppColors.redColor,
         width: 2,
       ),
     ),
-    focusedErrorBorder: OutlineInputBorder(
+    focusedErrorBorder: const OutlineInputBorder(
       borderSide: BorderSide(
         color: AppColors.whiteColor,
         width: 2,
       ),
     ),
-    enabledBorder: OutlineInputBorder(
+    enabledBorder: const OutlineInputBorder(
       borderSide: BorderSide(
         color: AppColors.whiteColor,
         width: 1,
       ),
     ),
-    focusedBorder: OutlineInputBorder(
+    focusedBorder: const OutlineInputBorder(
       borderSide:  BorderSide(
         color: AppColors.whiteColor,
         width: 2,
       ),
     ),
-    border: OutlineInputBorder(
+    border: const OutlineInputBorder(
       borderSide:  BorderSide(
         color: AppColors.whiteColor,
         width: 2,

@@ -7,8 +7,8 @@ class AppRoutes {
   static String initialRoute = "login";
 
   static final List<MenuItem> _menuOptions = [
-    MenuItem(route: "login", screen: LoginScreen()),
-    MenuItem(route: "user", screen: DashboardUserScreen()),
+    MenuItem(route: "login", screen: const LoginScreen()),
+    MenuItem(route: "user", screen: const DashboardUserScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> generateRoutes() {

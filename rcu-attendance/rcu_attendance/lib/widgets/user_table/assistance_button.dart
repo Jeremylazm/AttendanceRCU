@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:rcu_assistant/widgets/user_table/assistance_dialog.dart';
-import 'package:rcu_assistant/widgets/widgets.dart';
 
 class AssistanceButton extends StatelessWidget {
   const AssistanceButton({Key? key}) : super(key: key);

@@ -16,7 +16,7 @@ const ReportsButton({ Key? key }) : super(key: key);
       },
       hoverColor: Colors.grey.withOpacity(0.1),
       splashColor: Colors.green,
-      child: Icon(
+      child: const Icon(
         Icons.list,
         size: 35,
         color: Colors.red,
