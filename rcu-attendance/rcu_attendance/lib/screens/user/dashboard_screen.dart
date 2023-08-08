@@ -17,9 +17,9 @@ class DashboardUserScreen extends StatelessWidget {
         ChangeNotifierProvider(create: (_)=>RoutesUserProvider(),),
         ChangeNotifierProvider(create: (_)=>UsersProvider(),),
       ],
-      child: const Scaffold(
+      child: Scaffold(
         body: Row(
-          children: [
+          children: const [
             _UserSidebar(),
             _Content(),
           ],

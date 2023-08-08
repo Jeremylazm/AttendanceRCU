@@ -54,46 +54,51 @@ class _ChartsScreenState extends State<ChartsScreen> {
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-          width: 800,
-          child: 
-          SfCartesianChart(
+        width: 800,
+        child: Column(
+            // width: 800,
+            
+            children: [
+            SfCartesianChart(
+                primaryXAxis: CategoryAxis(),
+                legend: Legend(isVisible: true), 
+                tooltipBehavior: _tooltipBehavior,
+                series: <ChartSeries>[
+                  StackedBar100Series<ChartData2, String>(
+                      name: "Horas Realizadas",
+                      color: AppColors.mainBlueColor,
+                      dataSource: chartData2,
+                      xValueMapper: (ChartData2 data, _) => data.x,
+                      yValueMapper: (ChartData2 data, _) => data.y),
+                  StackedBar100Series<ChartData2, String>(
+                      name: "Horas Faltantes",
+                      color: AppColors.secondaryColor,
+                      dataSource: chartData2,
+                      xValueMapper: (ChartData2 data, _) => data.x,
+                      yValueMapper: (ChartData2 data, _) => data.y2),
+                ]),
+            SfCartesianChart(
               primaryXAxis: CategoryAxis(),
-              legend: Legend(isVisible: true), 
+              legend: Legend(isVisible: true),
               tooltipBehavior: _tooltipBehavior,
               series: <ChartSeries>[
-                StackedBar100Series<ChartData2, String>(
-                    name: "Horas Realizadas",
+                StackedBarSeries<ChartData, String>(
+                    name: "Horas Activas",
                     color: AppColors.mainBlueColor,
-                    dataSource: chartData2,
-                    xValueMapper: (ChartData2 data, _) => data.x,
-                    yValueMapper: (ChartData2 data, _) => data.y),
-                StackedBar100Series<ChartData2, String>(
-                    name: "Horas Faltantes",
+                    dataSource: chartData,
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y1),
+                StackedBarSeries<ChartData, String>(
+                    name: "Horas Inactivas",
                     color: AppColors.secondaryColor,
-                    dataSource: chartData2,
-                    xValueMapper: (ChartData2 data, _) => data.x,
-                    yValueMapper: (ChartData2 data, _) => data.y2),
-              ])
-          // SfCartesianChart(
-          //   primaryXAxis: CategoryAxis(),
-          //   legend: Legend(isVisible: true),
-          //   tooltipBehavior: _tooltipBehavior,
-          //   series: <ChartSeries>[
-          //     StackedBarSeries<ChartData, String>(
-          //         name: "Horas Activas",
-          //         color: AppColors.mainBlueColor,
-          //         dataSource: chartData,
-          //         xValueMapper: (ChartData data, _) => data.x,
-          //         yValueMapper: (ChartData data, _) => data.y1),
-          //     StackedBarSeries<ChartData, String>(
-          //         name: "Horas Inactivas",
-          //         color: AppColors.secondaryColor,
-          //         dataSource: chartData,
-          //         xValueMapper: (ChartData data, _) => data.x,
-          //         yValueMapper: (ChartData data, _) => data.y2),
-          //   ],
-          // ),
-          ),
+                    dataSource: chartData,
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y2),
+              ],
+            ),
+            ]
+            ),
+      ),
     );
   }
 }
