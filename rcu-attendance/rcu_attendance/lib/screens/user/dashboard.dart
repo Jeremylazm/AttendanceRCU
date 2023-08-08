@@ -105,8 +105,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
               unselectedLabelTextStyle: const TextStyle(),
               // Called when one tab is selected
-              leading: const Column(
-                children: [
+              leading: Column(
+                children: const [
                   SizedBox(
                     height: 8,
                   ),
